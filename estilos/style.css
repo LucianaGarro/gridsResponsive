@@ -1,0 +1,149 @@
+/*estilos generales*/
+/*mobile-smartphone*/
+*{
+   padding: 0;
+   margin: 0;
+}
+
+.border {
+   border: 1px solid black;
+}
+
+
+#grilla{
+   width: 100%;
+   height: 100vh; 
+
+}
+
+span:hover{
+   color: white;
+}
+
+header{
+   grid-area: header;
+   background-color: burlywood;
+}
+footer {
+   grid-area: footer;
+   background-color: cornflowerblue;
+}
+section#productos {
+   grid-area: productos;     
+}
+section#servicios {
+   grid-area: servicios;    
+   background-color: darkgray; 
+}
+nav {
+   grid-area: nav;
+   background-color: darkorchid;
+}
+aside {
+   grid-area: publicidad;
+   background-color: coral;
+}
+
+#grilla {
+   display: grid;
+   grid-template-areas: 
+   "header"
+   "nav"
+   "productos"
+   "servicios"
+   "publicidad"
+   "footer"
+   ;
+ 
+   grid-template-columns: 100%;
+   grid-template-rows: 100px 2fr 1fr 100px;
+   gap: 5px;
+ 
+  }
+
+
+
+.menuFlex{
+   display: flex; 
+   flex-direction: column;
+   }
+   
+   .productosFlex{
+       display: flex;
+       flex-direction: column;
+       background-color: pink;
+       text-align: center;
+   }
+
+
+
+@media(min-width:768px){
+
+   #grilla {
+      display: grid;
+      grid-template-areas: 
+      "header header"
+      "nav    nav"
+      "productos productos"
+      "servicios publicidad "
+      "footer    footer"
+      ;
+    
+      grid-template-columns:25% auto ;
+      grid-template-rows: 100px 2fr 1fr 100px;
+      gap: 5px;
+    
+     }
+     .menuFlex{
+      display: flex; 
+      flex-direction: row;
+      justify-content: space-evenly;
+      }
+
+      .productosFlex{
+         display: flex;
+         flex-direction: row;
+         background-color: pink;
+     }
+
+
+}
+
+
+
+
+/*desktop*/
+@media (min-width:1024px){
+
+   #grilla {
+    display: grid;
+    grid-template-areas: 
+    "nav header    header"
+    "nav productos publicidad"
+    "nav servicios publicidad"
+    "nav footer    footer";
+  
+    grid-template-columns: 20% auto 15%;
+    grid-template-rows: 100px 2fr 1fr 100px;
+    gap: 10px;
+  
+   }
+  
+   .menuFlex{
+      display: flex; 
+      flex-direction: column;
+      }
+      
+      .productosFlex{
+          display: flex;
+          flex-direction: row;
+          background-color: pink;
+      }
+   
+   /*estilos Flex*/
+  
+}
+
+
+
+
